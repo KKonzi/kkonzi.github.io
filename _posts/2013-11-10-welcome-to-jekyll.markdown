@@ -1,24 +1,67 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2013-11-10 10:18:00
-categories: Thriller Comedy Horror
+title:  "[SCSS] SCSS 문법 정리 (1) 네스팅"
+date:   2019-06-19 00:40:00
+categories: CSS
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+### (1) 셀렉터 네스팅
 
-Jekyll also offers powerful support for code snippets:
+scss 파일 만으로도 html  구조를 알 수 있으며, 타고 들어가는 것이 많을 때 유용하다.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+```scss
+// CSS
+.div p {color:skyblue}
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+// SCSS
+.div {
+  p {
+    color:skyblue;
+  }
+}
+```
 
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
+
+
+### (2) 속성 네스팅
+
+축양형으로 묶일 수 있는 속성들 끼리 네스팅이 가능하다. 예를 들어 `font`의 경우 `font-family`, `font-size`, `font-weight`등이 있는데 아래와 같이 속성의 하위 형태로 작성할 수 있다.
+
+```scss
+.content {
+  p {
+    font: {
+      family: "Noto Serif CJK KR", serif;
+      size: 15px;
+      weight: 400;
+    }
+  }
+}
+```
+
+
+
+### (3) 상위 요소 치환
+
+어떤 선택자의 { } 안에서 &를 쓰면 중괄호를 취하는 선택자 자신을 의미한다. div { &{} } 여기서 &는 div이다. 본인에게 속성을 준 후 :hover나 :target등을 이어서 줄 때 유용하다.
+
+```scss
+a {
+  color:#666;
+  &:hover { color:yellow; } // a:hover
+}
+```
+
+글자 그대로 &가 상위의 글자 a로 치환되는 것이기 때문에 그 뒤로 글자를 이어 써서 선택자 클래스명 이름을 완성할 수도 있다.
+
+```scss
+.btn {
+   display:inline-block; padding:3px 10px; border:1px solid #000;
+   &_blue { background-color:blue; border:0; } // .btn_blue
+   &_yellow { background-color:yellow; border:0; } // .btn_yellow
+}
+```
+
+
+
+## 
