@@ -1,9 +1,11 @@
 ---
 layout: post
-title:  "[SCSS] SCSS 문법 정리 (1) 네스팅"
+title:  "[SCSS] 문법 정리 - 1. 네스팅"
 date:   2019-06-19 00:40:00
 categories: CSS
 ---
+
+> Nesting : 선언의 중첩, 내포
 
 ### (1) 셀렉터 네스팅
 
@@ -31,9 +33,9 @@ scss 파일 만으로도 html  구조를 알 수 있으며, 타고 들어가는 
 .content {
   p {
     font: {
-      family: "Noto Serif CJK KR", serif;
-      size: 15px;
-      weight: 400;
+      family: "Noto Serif CJK KR", serif; // font-family
+      size: 15px; // font-size
+      weight: 400; // font-weight
     }
   }
 }
@@ -43,7 +45,7 @@ scss 파일 만으로도 html  구조를 알 수 있으며, 타고 들어가는 
 
 ### (3) 상위 요소 치환
 
-어떤 선택자의 { } 안에서 &를 쓰면 중괄호를 취하는 선택자 자신을 의미한다. div { &{} } 여기서 &는 div이다. 본인에게 속성을 준 후 :hover나 :target등을 이어서 줄 때 유용하다.
+어떤 선택자의 { } 안에서 &를 쓰면 중괄호를 취하는 선택자 자신을 의미한다. `div { &{} }`의 경우 `&는` `div`다. 본인에게 속성을 준 후 `:hover`나 `:target`등을 이어서 줄 때 유용하다.
 
 ```scss
 a {
@@ -52,7 +54,7 @@ a {
 }
 ```
 
-글자 그대로 &가 상위의 글자 a로 치환되는 것이기 때문에 그 뒤로 글자를 이어 써서 선택자 클래스명 이름을 완성할 수도 있다.
+글자 그대로 `&`가 선택자 자신의 글자로 치환되는 것이기 때문에 그 뒤로 글자를 이어 써서 선택자 클래스명 이름을 완성할 수도 있다.
 
 ```scss
 .btn {
@@ -61,7 +63,3 @@ a {
    &_yellow { background-color:yellow; border:0; } // .btn_yellow
 }
 ```
-
-
-
-## 
