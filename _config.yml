@@ -1,13 +1,13 @@
 name: 조꼰지의 개발 블로그
-description: KKonzi Dev Blog
+description: 그때그때 알게된 것들을 정리하는 블로그
 meta_description: "조꼰조꼰지의 개발 블로그 - KKonzi Dev Blog"
 
 markdown: kramdown
 highlighter: pygments
 logo: false
 paginate: 15
-baseurl: /
-domain_name: 'http://yourblog-domain.com'
+baseurl: 'https://kkonzi.github.io/'
+domain_name: 'https://kkonzi.github.io/'
 google_analytics: 'UA-XXXXXXXX-X'
 gems: [jekyll-paginate]
 
