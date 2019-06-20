@@ -3,7 +3,7 @@ description: 그때그때 알게된 것들을 정리하는 블로그
 meta_description: "조꼰조꼰지의 개발 블로그 - KKonzi Dev Blog"
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 logo: false
 paginate: 15
 baseurl: 'https://kkonzi.github.io/'
