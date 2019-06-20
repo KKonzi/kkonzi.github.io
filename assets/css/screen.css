@@ -692,7 +692,7 @@ margin on the iframe, cause it breaks stuff. */
     position: relative;
     padding: 35px 40px;
     margin: 0 0 30px 0;
-    background: #a79c8e;
+    background: rgba(97, 207, 156, 0.8);
 }
 
 .main-header .main-nav {
@@ -700,7 +700,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .main-nav a {
-    padding-top: 10px;
+    /* padding-top: 10px; */
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
 }
