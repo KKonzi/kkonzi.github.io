@@ -691,7 +691,7 @@ margin on the iframe, cause it breaks stuff. */
 .main-nav {
     position: relative;
     padding: 35px 40px;
-    margin: 0 0 30px 0;
+    /* margin: 0 0 30px 0; */
     background: rgba(97, 207, 156, 0.8);
 }
 
@@ -1780,7 +1780,7 @@ body:not(.post-template) .post-title {
     }
     .main-nav {
         padding: 0;
-        margin-bottom: 2rem;
+        /* margin-bottom: 2rem; */
     }
     .blog-logo {
         padding: 10px 10px;
@@ -1795,6 +1795,7 @@ body:not(.post-template) .post-title {
         border-radius: 0;
         color: #2e2e2e;
         background: transparent;
+        margin-top: 5px;
     }
     .back-button:hover,
     .subscribe-button:hover {
