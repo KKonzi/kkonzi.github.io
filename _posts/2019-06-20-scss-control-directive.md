@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[SCSS] 문법 정리 - 3. @if/@for/@each/@while"
-date:   2019-06-20 22:30:00
+date:   2019-06-21 23:50:00
 categories: CSS
 ---
 
